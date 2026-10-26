@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade Prática 02 - Questões de 1 a 30</title>
+  <link rel="stylesheet" href="style02.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- CABEÇALHO -->
+    <header class="topo-pagina">
+      <h1>Atividade Prática 02 - Front-End</h1>
+      <p>Caderno de Exercícios Resolvidos e Comentados (Questões de 1 a 30)</p>
+    </header>
+
+    <!-- MENU DE NAVEGAÇÃO RÁPIDA -->
+    <nav class="menu-navegacao">
+      <ul>
+        <li><a href="#parte1">Parte 1: Fontes (1 a 6)</a></li>
+        <li><a href="#parte2">Parte 2: Linhas e Bordas (7 a 12)</a></li>
+        <li><a href="#parte3">Parte 3: Eventos (13 a 18)</a></li>
+        <li><a href="#parte4">Parte 4: Layouts (19 a 24)</a></li>
+        <li><a href="#parte5">Parte 5: Semântica & Q30 (25 a 30)</a></li>
+      </ul>
+    </nav>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+
+      <!-- ====================================================================
+           PARTE 1 – ESTILOS DE FONTES (QUESTÕES 1 A 6)
+           ==================================================================== -->
+      <section id="parte1" class="secao-bloco">
+        <h2 class="titulo-parte">Parte 1 – Folha de Estilos (CSS): Estilos de fontes</h2>
+
+        <!-- Questão 1 -->
+        <article class="card-questao" id="q1">
+          <div class="questao-cabecalho">
+            <span class="numero-bolha">1</span>
+            <h3 class="enunciado-questao">1. Explique o que é CSS e qual é a sua importância no desenvolvimento de páginas web. Apresente um exemplo de como o CSS pode melhorar a aparência de um documento HTML.</h3>
+          </div>
+          <div class="resposta-simples">
+            <p><strong>Resposta simples:</strong> O CSS (Folhas de Estilo em Cascata) é a linguagem que define as cores, fontes, tamanhos, espaçamentos e todo o visual de um site. Ele é fundamental porque separa a estrutura (HTML) da aparência (CSS), permitindo criar páginas modernas e fáceis de manter.</p>
+          </div>
+          <div class="caixa-demo">
+            <strong>Exemplo prático:</strong>
+            <h4 style="color: #1d4ed8; font-family: Arial, sans-serif; text-align: center; margin: 8px 0;">Título Estilizado com CSS</h4>
+            <pre><code>h1 {
+  color: #1d4ed8;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}</code></pre>
+          </div>
+        </article>
+
+        <!-- Questão 2 -->
+        <article class="card-questao" id="q2">
+          <div class="questao-cabecalho">
+            <span class="numero-bolha">2</span>
+            <h3 class="enunciado-questao">2. Explique a diferença entre as propriedades font-family, font-size e font-weight. Apresente um exemplo de código utilizando as três propriedades em um título.</h3>
+          </div>
+          <div class="resposta-simples">
+            <p><strong>Resposta simples:</strong></p>
+            <ul>
+              <li><strong>font-family:</strong> Escolhe o tipo/família da letra (ex: Arial, Georgia).</li>
+              <li><strong>font-size:</strong> Define o tamanho da letra (ex: 28px).</li>
+              <li><strong>font-weight:</strong> Define a grossura da letra (normal ou negrito/bold).</li>
+            </ul>
+          </div>
+          <div class="caixa-demo">
+            <strong>Exemplo em um título:</strong>
+            <pre><code>h1 {
+  font-family: 'Segoe UI', Tahoma, sans-serif; /* Tipo da fonte */
+  font-size: 28px;                             /* Tamanho */
+  font-weight: bold;                           /* Negrito */
+}</code></pre>
+          </div>
+        </article>
+
+        <!-- Questão 3 -->
+        <article class="card-questao" id="q3">
+          <div class="questao-cabecalho">
+            <span class="numero-bolha">3</span>
+            <h3 class="enunciado-questao">3. Desenvolva um trecho de código CSS que configure um título com fonte Arial, tamanho de 32 pixels, texto em negrito e cor azul.</h3>
+          </div>
+          <div class="resposta-simples">
+            <p><strong>Resposta simples:</strong> Basta aplicar as propriedades <code>font-family</code>, <code>font-size</code>, <code>font-weight</code> e <code>color</code> no seletor do título.</p>
+          </div>
+          <div class="caixa-demo">
+            <h2 class="titulo-q3-estilo">Título da Questão 3</h2>
+            <pre><code>h1 {
+  font-family: Arial, sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  color: blue; /* ou #1d4ed8 */
+}</code></pre>
+          </div>
+        </article>
+
+        <!-- Questão 4 -->
+        <article class="card-questao" id="q4">
+          <div class="questao-cabecalho">
+            <span class="numero-bolha">4</span>
+            <h3 class="enunciado-questao">4. Explique a diferença entre as propriedades font-style e text-decoration. Apresente um exemplo de utilização de cada uma delas.</h3>
+          </div>
+          <div class="resposta-simples">
+            <p><strong>Resposta simples:</strong></p>
+            <ul>
+              <li><strong>font-style:</strong> Modifica a inclinação da letra (deixando em itálico).</li>
+              <li><strong>text-decoration:</strong> Adiciona linhas decorativas (sublinhado embaixo ou riscado no meio).</li>
+            </ul>
+          </div>
+          <div class="caixa-demo">
+            <p class="texto-italico">Exemplo com <code>font-style: italic</code> (letra inclinada)</p>
+            <p class="texto-sublinhado">Exemplo com <code>text-decoration: underline</code> (linha embaixo)</p>
+            <pre><code>.citacao { font-style: italic; }
+.destaque { text-decoration: underline; }</code></pre>
+          </div>
+        </article>
+
+        <!-- Questão 5 -->
+        <article class="card-questao" id="q5">
+          <div class="questao-cabecalho">
+            <span class="numero-bolha">5</span>
+            <h3 class="enunciado-questao">5. Crie um código HTML e CSS para apresentar três parágrafos com estilos diferentes: o primeiro com fonte Arial, o segundo com fonte Georgia e o terceiro com fonte Verdana. Configure também tamanhos diferentes para cada parágrafo.</h3>
+          </div>
+          <div class="caixa-demo">
+            <p class="paragrafo-arial">1. Parágrafo com fonte <strong>Arial</strong> e tamanho <strong>18px</strong>.</p>
+            <p class="paragrafo-georgia">2. Parágrafo com fonte <strong>Georgia</strong> e tamanho <strong>16px</strong>.</p>
+            <p class="paragrafo-verdana">3. Parágrafo com fonte <strong>Verdana</strong> e tamanho <strong>14px</strong>.</p>
+            <pre><code>/* CSS da Questão 5 */
+.paragrafo-um   { font-family: Arial, sans-serif; font-size: 18px; }
+.paragrafo-dois { font-family: Georgia, serif;   font-size: 16px; }
+.paragrafo-tres { font-family: Verdana, sans-serif; font-size: 14px; }</code></pre>
+          </div>
+        </article>
+
+        <!-- Questão 6 -->
+        <article class="card-questao" id="q6">
+          <div class="questao-cabecalho">
+            <span class="numero-bolha">6</span>
+            <h3 class="enunciado-questao">6. Explique como a escolha das fontes pode influenciar a legibilidade, a acessibilidade e a experiência do usuário em um site. Cite duas boas práticas para a escolha de fontes.</h3>
+          </div>
+          <div class="resposta-simples">
+            <p><strong>Resposta simples:</strong> Fontes fáceis de ler não cansam os olhos do usuário (legibilidade), ajudam pessoas com dificuldades visuais a distinguir as letras (acessibilidade) e transmitem a seriedade ou descontração da marca (experiência do usuário).</p>
+            <p><strong>Duas boas práticas:</strong></p>
+            <ol>
+              <li>Usar fontes sem serifa (sans-serif) para blocos de texto em telas.</li>
+              <li>Não misturar mais de 2 ou 3 tipos de fontes no mesmo site.</li>
+            </ol>
+          </div>
+        </article>
+      </section>
+
+      <!-- ====================================================================
+           PARTE 2 – ESTILOS DE LINHAS (QUESTÕES 7 A 12)
+           ==================================================================== -->
+      <section id="parte2" class="secao-bloco">
+        <h2 class="titulo-parte">Parte 2 – Estilos de linhas</h2>
+
+        <!-- Questão 7 -->
+        <article class="card-questao" id="q7">
+          <div class="questao-cabecalho">
+            <span class="numero-bolha">7</span>
+            <h3 class="enunciado-questao">7. Explique a finalidade da propriedade line-height no CSS. Apresente um exemplo de código que melhore o espaçamento entre as linhas de um parágrafo.</h3>
+          </div>
+          <div class="resposta-simples">
+            <p><strong>Resposta simples:</strong> O <code>line-height</code> define a altura da linha, ou seja, o espaço vertical entre uma linha e outra do mesmo texto. Ele evita que as linhas fiquem coladas, tornando a leitura muito mais agradável.</p>
+          </div>
+          <div class="caixa-demo">
+            <p class="paragrafo-lineheight">
+              Este parágrafo possui <code>line-height: 1.8</code>. Observe como o espaço vertical entre as linhas deixa o texto muito mais confortável para ler na tela.
+            </p>
+            <pre><code>p {
+  font-size: 16px;
+  line-height: 1.8; /* Espaçamento agradável entre linhas */
+}</code></pre>
+          </div>
+        </article>
+
+        <!-- Questão 8 -->
+        <article class="card-questao" id="q8">
+          <div class="questao-cabecalho">
+            <span class="numero-bolha">8</span>
+            <h3 class="enunciado-questao">8. Qual é a diferença entre as propriedades border, border-width, border-style e border-color? Explique e apresente um exemplo de utilização.</h3>
+          </div>
+          <div class="resposta-simples">
+            <p><strong>Resposta simples:</strong></p>
+            <ul>
+              <li><strong>border-width:</strong> Define apenas a grossura da linha (ex: 2px).</li>
+              <li><strong>border-style:</strong> Define apenas o tipo do traço (sólido, tracejado, pontilhado). É obrigatório!</li>
+              <li><strong>border-color:</strong> Define apenas a cor da borda.</li>
+              <li><strong>border:</strong> O atalho prático que configura grossura, estilo e cor tudo junto.</li>
+            </ul>
+          </div>
+          <div class="caixa-demo">
+            <pre><code>/* Atalho prático */
+.caixa {
+  border: 2px solid #000000; /* largura, estilo e cor */
+}</code></pre>
+          </div>
+        </article>
+
+        <!-- Questão 9 -->
+        <article class="card-questao" id="q9">
+          <div class="questao-cabecalho">
+            <span class="numero-bolha">9</span>
+            <h3 class="enunciado-questao">9. Desenvolva um código CSS para criar uma caixa com borda sólida de 2 pixels, cor preta, cantos arredondados e espaçamento interno de 15 pixels.</h3>
+          </div>
+          <div class="caixa-demo">
+            <div class="caixa-q9">
+              Caixa com borda sólida preta de 2px, <code>border-radius: 8px</code> e <code>padding: 15px</code>.
+            </div>
+            <pre><code>.caixa {
+  border: 2px solid black; /* Borda sólida preta de 2px */
+  border-radius: 8px;      /* Cantos arredondados */
+  padding: 15px;            /* Espaço interno de 15px */
+}</code></pre>
+          </div>
+        </article>
+
+        <!-- Questão 10 -->
+        <article class="card-questao" id="q10">
+          <div class="questao-cabecalho">
+            <span class="numero-bolha">10</span>
+            <h3 class="enunciado-questao">10. Explique a diferença entre as propriedades margin e padding. Utilize um exemplo prático para demonstrar como cada uma interfere no posicionamento e no espaçamento dos elementos.</h3>
+          </div>
+          <div class="resposta-simples">
+            <p><strong>Resposta simples:</strong></p>
+            <ul>
+              <li><strong>Padding (interno):</strong> É o espaço de <strong>dentro</strong> da caixa. Fica entre o texto e a borda.</li>
+              <li><strong>Margin (externo):</strong> É o espaço de <strong>fora</strong> da caixa. Empurra os outros elementos para longe.</li>
+            </ul>
+          </div>
+          <div class="caixa-demo">
+            <div class="caixa-margin-padding-externa">
+              <p><strong>Caixa Cinza Externa:</strong> Tem <code>margin</code> afastando dos outros e <code>padding</code> afastando a caixa interna.</p>
+              <div class="caixa-margin-padding-interna">
+                <strong>Caixa Branca Interna:</strong> Conteúdo protegido pelo padding.
+              </div>
+            </div>
+            <pre><code>.card {
+  padding: 20px; /* Afasta o texto da borda do cartão */
+  margin: 15px;  /* Afasta o cartão dos outros elementos */
+}</code></pre>
+          </div>
+        </article>
+
+        <!-- Questão 11 -->
+        <article class="card-questao" id="q11">
+          <div class="questao-cabecalho">
+            <span class="numero-bolha">11</span>
+            <h3 class="enunciado-questao">11. Crie uma página HTML com três caixas de conteúdo. Utilize CSS para configurar uma borda diferente em cada caixa: sólida, tracejada e pontilhada. Explique quais propriedades foram utilizadas.</h3>
+          </div>
+          <div class="caixa-demo">
+            <div class="grade-bordas">
+              <div class="borda-item borda-solida">Borda Sólida<br><code>border-style: solid</code></div>
+              <div class="borda-item borda-tracejada">Borda Tracejada<br><code>border-style: dashed</code></div>
+              <div class="borda-item borda-pontilhada">Borda Pontilhada<br><code>border-style: dotted</code></div>
+            </div>
+            <pre><code>.solida     { border: 3px solid #2563eb; }   /* solid */
+.tracejada  { border: 3px dashed #16a34a; }  /* dashed */
+.pontilhada { border: 3px dotted #dc2626; }  /* dotted */</code></pre>
+            <p style="margin-top: 8px;"><strong>Propriedade explicada:</strong> Foi utilizada a propriedade <code>border-style</code> com os valores <code>solid</code> (linha contínua), <code>dashed</code> (traços) e <code>dotted</code> (pontos).</p>
+          </div>
+        </article>
+
+        <!-- Questão 12 -->
+        <article class="card-questao" id="q12">
+          <div class="questao-cabecalho">
+            <span class="numero-bolha">12</span>
+            <h3 class="enunciado-questao">12. Explique como as propriedades border-radius, box-shadow e outline podem ser utilizadas para melhorar a apresentação visual de elementos de uma página web. Apresente um exemplo de aplicação de pelo menos duas delas.</h3>
+          </div>
+          <div class="resposta-simples">
+            <p><strong>Resposta simples:</strong></p>
+            <ul>
+              <li><strong>border-radius:</strong> Arredonda os cantos retos, dando uma aparência moderna.</li>
+              <li><strong>box-shadow:</strong> Coloca sombra embaixo do cartão, criando profundidade 3D.</li>
+              <li><strong>outline:</strong> Cria um contorno externo de destaque sem alterar o tamanho do elemento.</li>
+            </ul>
+          </div>
+          <div class="caixa-demo">
+            <div class="card-sombra-efeito">
+              <strong>Passe o mouse aqui:</strong> Cantos arredondados (<code>border-radius</code>), sombra suave (<code>box-shadow</code>) e contorno ao focar (<code>outline</code>).
+            </div>
+            <pre><code>.cartao {
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}</code></pre>
+          </div>
+        </article>
+      </section>
+
+      <!-- ====================================================================
+           PARTE 3 – EVENTOS (QUESTÕES 13 A 18)
+           ==================================================================== -->
+      <section id="parte3" class="secao-bloco">
+        <h2 class="titulo-parte">Parte 3 – Eventos</h2>
+
+        <!-- Questão 13 -->
+        <article class="card-questao" id="q13">
+          <div class="questao-cabecalho">
+            <span class="numero-bolha">13</span>
+            <h3 class="enunciado-questao">13. Explique o que são eventos em páginas web e qual é a função do JavaScript na identificação e no tratamento desses eventos.</h3>
+          </div>
+          <div class="resposta-simples">
+            <p><strong>Resposta simples:</strong> Eventos são ações que acontecem na página (como o usuário clicar, mover o mouse ou preencher um campo). O JavaScript é o "cérebro" que monitora esses eventos e executa funções imediatas de resposta, tornando o site dinâmico e interativo sem recarregar a página.</p>
+          </div>
+        </article>
+
+        <!-- Questão 14 -->
+        <article class="card-questao" id="q14">
+          <div class="questao-cabecalho">
+            <span class="numero-bolha">14</span>
+            <h3 class="enunciado-questao">14. Explique a diferença entre os eventos click, mouseover e mouseout. Apresente uma situação em que cada um deles poderia ser utilizado.</h3>
+          </div>
+          <div class="resposta-simples">
+            <p><strong>Resposta simples e situações:</strong></p>
+            <ul>
+              <li><strong>click:</strong> Ocorre quando o usuário clica no elemento. <em>Exemplo:</em> Botão de comprar ou curtir.</li>
+              <li><strong>mouseover:</strong> Ocorre quando a seta do mouse entra em cima do elemento. <em>Exemplo:</em> Abrir um menu suspenso ou dar zoom em foto.</li>
+              <li><strong>mouseout:</strong> Ocorre quando a seta do mouse sai de cima do elemento. <em>Exemplo:</em> Fechar o menu suspenso e voltar a foto ao normal.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Questão 15 -->
+        <article class="card-questao" id="q15">
+          <div class="questao-cabecalho">
+            <span class="numero-bolha">15</span>
+            <h3 class="enunciado-questao">15. Desenvolva um código HTML e JavaScript com um botão que, ao ser clicado, altere o texto de um parágrafo da página.</h3>
+          </div>
+          <div class="caixa-demo">
+            <p id="paragrafo-q15" style="font-weight: 600; margin-bottom: 8px;">Texto inicial antes do clique.</p>
+            <button id="btn-q15" class="btn-padrao">Mudar Texto</button>
+            <pre><code>const botao = document.getElementById('btn-q15');
+const paragrafo = document.getElementById('paragrafo-q15');
+
+botao.addEventListener('click', function() {
+  paragrafo.textContent = 'Texto alterado com sucesso pelo clique!';
+});</code></pre>
+          </div>
+        </article>
+
+        <!-- Questão 16 -->
+        <article class="card-questao" id="q16">
+          <div class="questao-cabecalho">
+            <span class="numero-bolha">16</span>
+            <h3 class="enunciado-questao">16. Crie um exemplo em que a cor de fundo de um botão seja alterada quando o usuário passar o mouse sobre ele e retorne à cor original quando o mouse sair. Utilize eventos JavaScript e CSS.</h3>
+          </div>
+          <div class="caixa-demo">
+            <button id="btn-q16" class="btn-hover-demo">Passe o mouse aqui!</button>
+            <span id="texto-status-mouse" style="margin-left: 10px; font-size: 14px; color: #64748b;">(Mouse fora do botão)</span>
+            <pre><code>const btn = document.getElementById('btn-q16');
+
+// Mouse entra: fica laranja
+btn.addEventListener('mouseover', function() {
+  btn.style.backgroundColor = '#ea580c';
+});
+
+// Mouse sai: volta ao cinza original
+btn.addEventListener('mouseout', function() {
+  btn.style.backgroundColor = '#475569';
+});</code></pre>
+          </div>
+        </article>
+
+        <!-- Questão 17 -->
+        <article class="card-questao" id="q17">
+          <div class="questao-cabecalho">
+            <span class="numero-bolha">17</span>
+            <h3 class="enunciado-questao">17. Explique a diferença entre utilizar eventos diretamente no HTML, como onclick, e utilizar o método addEventListener() no JavaScript. Cite uma vantagem de utilizar addEventListener().</h3>
+          </div>
+          <div class="resposta-simples">
+            <p><strong>Resposta simples:</strong> O <code>onclick</code> no HTML mistura código de programação direto na marcação visual. Já o <code>addEventListener()</code> é colocado no arquivo JavaScript, mantendo tudo limpo e organizado.</p>
+            <p><strong>Vantagem do addEventListener():</strong> Permite adicionar vários ouvintes e ações diferentes para o mesmo evento no mesmo botão sem dar conflito.</p>
+          </div>
+        </article>
+
+        <!-- Questão 18 -->
+        <article class="card-questao" id="q18">
+          <div class="questao-cabecalho">
+            <span class="numero-bolha">18</span>
+            <h3 class="enunciado-questao">18. Desenvolva um formulário com um campo para o nome do usuário e um botão. Ao clicar no botão, o programa deverá exibir uma mensagem de boas-vindas com o nome digitado. Explique como o evento de clique é tratado.</h3>
+          </div>
+          <div class="caixa-demo">
+            <div class="form-linha">
+              <input type="text" id="campo-nome-q18" class="campo-input" placeholder="Digite seu nome aqui...">
+              <button id="btn-enviar-q18" class="btn-padrao">Enviar</button>
+            </div>
+            <div id="msg-q18" class="resultado-aviso" style="display: none;"></div>
+            <pre><code>btn.addEventListener('click', function() {
+  const nome = campoNome.value.trim();
+  if (nome !== '') {
+    msg.textContent = `Olá, ${nome}! Seja muito bem-vindo(a)!`;
+  }
+});</code></pre>
+            <p style="margin-top: 8px;"><strong>Como o evento é tratado:</strong> O JavaScript escuta o clique do botão com <code>addEventListener('click')</code>, lê o valor do campo com <code>.value</code> e altera o texto do parágrafo de mensagem com <code>.textContent</code>.</p>
+          </div>
+        </article>
+      </section>
+
+      <!-- ====================================================================
+           PARTE 4 – RESPONSIVIDADE: CRIAÇÃO DE LAYOUTS (QUESTÕES 19 A 24)
+           ==================================================================== -->
+      <section id="parte4" class="secao-bloco">
+        <h2 class="titulo-parte">Parte 4 – Responsividade: Criação de layouts</h2>
+
+        <!-- Questão 19 -->
+        <article class="card-questao" id="q19">
+          <div class="questao-cabecalho">
+            <span class="numero-bolha">19</span>
+            <h3 class="enunciado-questao">19. Explique o conceito de responsividade no desenvolvimento Front-End. Por que um site precisa se adaptar a computadores, tablets e celulares?</h3>
+          </div>
+          <div class="resposta-simples">
+            <p><strong>Resposta simples:</strong> Responsividade é fazer a página se ajustar e reorganizar os elementos para qualquer tamanho de tela. É obrigatório porque a maior parte dos acessos hoje vem de celulares; se o site não se adaptar, o usuário precisa dar zoom e rolar a página pros lados, o que causa frustração e abandono do site.</p>
+          </div>
+        </article>
+
+        <!-- Questão 20 -->
+        <article class="card-questao" id="q20">
+          <div class="questao-cabecalho">
+            <span class="numero-bolha">20</span>
+            <h3 class="enunciado-questao">20. Explique a função da regra @media no CSS e apresente um exemplo em que o tamanho da fonte de um título seja reduzido quando a largura da tela for igual ou inferior a 600 pixels.</h3>
+          </div>
+          <div class="resposta-simples">
+            <p><strong>Resposta simples:</strong> A regra <code>@media</code> aplica estilos específicos apenas quando a tela atingir determinada largura (como no celular).</p>
+          </div>
+          <div class="caixa-demo">
+            <pre><code>/* Tamanho normal para telas grandes */
+h1 {
+  font-size: 32px;
+}
+
+/* Telas até 600px (celulares): diminui o título */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 20px;
+  }
+}</code></pre>
+          </div>
+        </article>
+
+        <!-- Questão 21 -->
+        <article class="card-questao" id="q21">
+          <div class="questao-cabecalho">
+            <span class="numero-bolha">21</span>
+            <h3 class="enunciado-questao">21. Desenvolva uma página HTML com três cartões de conteúdo posicionados lado a lado em telas grandes. Utilize CSS para fazer com que os cartões sejam organizados em uma única coluna em telas com largura de até 600 pixels.</h3>
+          </div>
+          <div class="caixa-demo">
+            <p>Os 3 cartões abaixo ficam lado a lado no computador e em uma coluna única em telas até 600px:</p>
+            <div class="conteiner-cards-flex">
+              <div class="card-info">
+                <h4>Cartão 1</h4>
+                <p>Lado a lado no computador e coluna única no celular.</p>
+              </div>
+              <div class="card-info">
+                <h4>Cartão 2</h4>
+                <p>Lado a lado no computador e coluna única no celular.</p>
+              </div>
+              <div class="card-info">
+                <h4>Cartão 3</h4>
+                <p>Lado a lado no computador e coluna única no celular.</p>
+              </div>
+            </div>
+            <pre><code>.conteiner { display: flex; gap: 15px; }
+.card { flex: 1; }
+
+@media (max-width: 600px) {
+  .conteiner { flex-direction: column; } /* Vira 1 coluna no celular */
+}</code></pre>
+          </div>
+        </article>
+
+        <!-- Questão 22 -->
+        <article class="card-questao" id="q22">
+          <div class="questao-cabecalho">
+            <span class="numero-bolha">22</span>
+            <h3 class="enunciado-questao">22. Explique a diferença entre utilizar unidades fixas, como px, e unidades relativas, como %, em, rem, vw e vh. Apresente exemplos de situações em que essas unidades podem ser úteis.</h3>
+          </div>
+          <div class="resposta-simples">
+            <p><strong>Resposta simples e situações:</strong></p>
+            <ul>
+              <li><strong>px (fixo):</strong> Tamanho que nunca muda. Útil para bordas de 1px ou 2px.</li>
+              <li><strong>% (relativo):</strong> Proporcional ao elemento pai. Útil para largura de colunas (ex: <code>width: 50%</code>).</li>
+              <li><strong>rem (relativo):</strong> Baseado na fonte padrão da página. É a melhor unidade para fontes acessíveis.</li>
+              <li><strong>vw e vh:</strong> Proporcionais à largura (vw) e altura (vh) da janela do navegador. Útil para banners de tela cheia (<code>100vh</code>).</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Questão 23 -->
+        <article class="card-questao" id="q23">
+          <div class="questao-cabecalho">
+            <span class="numero-bolha">23</span>
+            <h3 class="enunciado-questao">23. Crie um layout responsivo para uma página que contenha um cabeçalho, um menu de navegação, uma área principal e um rodapé. Explique como você organizaria esses elementos em telas grandes e pequenas.</h3>
+          </div>
+          <div class="resposta-simples">
+            <p><strong>Organização:</strong></p>
+            <ul>
+              <li><strong>Em telas grandes (desktop):</strong> Cabeçalho e menu lado a lado no topo horizontal; conteúdo central pode ter colunas; rodapé com links distribuídos.</li>
+              <li><strong>Em telas pequenas (celular):</strong> Todos os blocos ficam empilhados em <strong>coluna única</strong> na vertical para facilitar a rolagem com o dedo e não esmagar os textos.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Questão 24 -->
+        <article class="card-questao" id="q24">
+          <div class="questao-cabecalho">
+            <span class="numero-bolha">24</span>
+            <h3 class="enunciado-questao">24. Explique como as propriedades display: flex, flex-wrap e justify-content podem ajudar na criação de layouts responsivos. Apresente um exemplo de código que utilize essas propriedades.</h3>
+          </div>
+          <div class="resposta-simples">
+            <p><strong>Resposta simples:</strong></p>
+            <ul>
+              <li><strong>display: flex:</strong> Coloca os itens filhos alinhados lado a lado automaticamente.</li>
+              <li><strong>flex-wrap: wrap:</strong> Permite que os itens pulem para a linha de baixo quando não houver mais espaço na tela.</li>
+              <li><strong>justify-content:</strong> Controla a distribuição do espaço entre os itens (ex: espalhados ou centralizados).</li>
+            </ul>
+          </div>
+          <div class="caixa-demo">
+            <pre><code>.container-flex {
+  display: flex;                  /* Alinha os itens em linha */
+  flex-wrap: wrap;                /* Quebra de linha se a tela for pequena */
+  justify-content: space-between; /* Espalha os itens de ponta a ponta */
+}</code></pre>
+          </div>
+        </article>
+      </section>
+
+      <!-- ====================================================================
+           PARTE 5 – RESPONSIVIDADE: CÓDIGO SEMÂNTICO (QUESTÕES 25 A 30)
+           ==================================================================== -->
+      <section id="parte5" class="secao-bloco">
+        <h2 class="titulo-parte">Parte 5 – Responsividade: Código semântico</h2>
+
+        <!-- Questão 25 -->
+        <article class="card-questao" id="q25">
+          <div class="questao-cabecalho">
+            <span class="numero-bolha">25</span>
+            <h3 class="enunciado-questao">25. Explique o que é HTML semântico e por que é importante utilizar elementos que representem corretamente o significado do conteúdo de uma página.</h3>
+          </div>
+          <div class="resposta-simples">
+            <p><strong>Resposta simples:</strong> HTML semântico é usar tags que explicam o que o conteúdo é (como <code>&lt;header&gt;</code> para topo e <code>&lt;footer&gt;</code> para rodapé), em vez de usar apenas <code>&lt;div&gt;</code> para tudo. É importante para o Google entender a página e para pessoas com deficiência visual navegarem por leitores de tela.</p>
+          </div>
+        </article>
+
+        <!-- Questão 26 -->
+        <article class="card-questao" id="q26">
+          <div class="questao-cabecalho">
+            <span class="numero-bolha">26</span>
+            <h3 class="enunciado-questao">26. Explique a finalidade das tags &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;section&gt; e &lt;footer&gt;. Apresente uma situação de uso para cada uma delas.</h3>
+          </div>
+          <div class="resposta-simples">
+            <p><strong>Finalidade e situações de uso:</strong></p>
+            <ul>
+              <li><strong>&lt;header&gt;:</strong> Cabeçalho do site. <em>Uso:</em> Logotipo e título principal.</li>
+              <li><strong>&lt;nav&gt;:</strong> Menu de links. <em>Uso:</em> Links para "Início", "Sobre", "Contato".</li>
+              <li><strong>&lt;main&gt;:</strong> Conteúdo principal e exclusivo da página. <em>Uso:</em> O texto da notícia ou produtos.</li>
+              <li><strong>&lt;section&gt;:</strong> Seção temática de assunto. <em>Uso:</em> Seção "Depoimentos" ou "Planos".</li>
+              <li><strong>&lt;footer&gt;:</strong> Rodapé da página. <em>Uso:</em> Direitos autorais e redes sociais.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Questão 27 -->
+        <article class="card-questao" id="q27">
+          <div class="questao-cabecalho">
+            <span class="numero-bolha">27</span>
+            <h3 class="enunciado-questao">27. Observe a estrutura abaixo e explique quais problemas podem existir na utilização excessiva de elementos &lt;div&gt;. Em seguida, reescreva o exemplo utilizando tags semânticas adequadas.</h3>
+          </div>
+          <div class="resposta-simples">
+            <p><strong>Problemas da "Divite":</strong> O código fica desorganizado e confuso para quem programa, os motores de busca do Google não entendem a hierarquia e os leitores de tela não conseguem orientar deficientes visuais.</p>
+          </div>
+          <div class="caixa-demo">
+            <strong>Reescrita semântica adequada:</strong>
+            <pre><code>&lt;header&gt;
+  &lt;h1&gt;Minha página&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;a href="#inicio"&gt;Início&lt;/a&gt;
+    &lt;a href="#sobre"&gt;Sobre&lt;/a&gt;
+    &lt;a href="#contato"&gt;Contato&lt;/a&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;p&gt;Conteúdo principal&lt;/p&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+  &lt;p&gt;Rodapé&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+          </div>
+        </article>
+
+        <!-- Questão 28 -->
+        <article class="card-questao" id="q28">
+          <div class="questao-cabecalho">
+            <span class="numero-bolha">28</span>
+            <h3 class="enunciado-questao">28. Explique como o uso de HTML semântico pode contribuir para a acessibilidade e para a compreensão da estrutura de uma página por mecanismos de busca. Cite pelo menos três benefícios.</h3>
+          </div>
+          <div class="resposta-simples">
+            <p><strong>Três benefícios:</strong></p>
+            <ol>
+              <li><strong>Navegação facilitada para cegos:</strong> Os leitores de tela conseguem pular direto para a tag <code>&lt;main&gt;</code> sem ter que reouvir o menu inteiro.</li>
+              <li><strong>Melhor SEO no Google:</strong> O Google entende perfeitamente o que é o título importante (<code>&lt;h1&gt;</code>) e o artigo (<code>&lt;article&gt;</code>), melhorando a posição do site.</li>
+              <li><strong>Código limpo e fácil de manter:</strong> Qualquer programador bate o olho e sabe para que serve cada bloco.</li>
+            </ol>
+          </div>
+        </article>
+
+        <!-- Questão 29 -->
+        <article class="card-questao" id="q29">
+          <div class="questao-cabecalho">
+            <span class="numero-bolha">29</span>
+            <h3 class="enunciado-questao">29. Desenvolva a estrutura HTML semântica de um site de notícias que contenha um cabeçalho, um menu de navegação, uma área principal com duas notícias e um rodapé. Utilize corretamente as tags semânticas estudadas.</h3>
+          </div>
+          <div class="caixa-demo">
+            <pre><code>&lt;header&gt;
+  &lt;h1&gt;Portal de Notícias&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;a href="#tecnologia"&gt;Tecnologia&lt;/a&gt;
+    &lt;a href="#brasil"&gt;Brasil&lt;/a&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;section&gt;
+    &lt;h2&gt;Destaques&lt;/h2&gt;
+
+    &lt;article&gt;
+      &lt;h3&gt;Notícia 1: Avanços do Front-End em 2026&lt;/h3&gt;
+      &lt;p&gt;O uso de HTML semântico melhora a acessibilidade em todo o mundo.&lt;/p&gt;
+    &lt;/article&gt;
+
+    &lt;article&gt;
+      &lt;h3&gt;Notícia 2: O crescimento do mercado de tecnologia&lt;/h3&gt;
+      &lt;p&gt;Profissionais capacitados em responsividade estão em alta demanda.&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/section&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+  &lt;p&gt;&copy; 2026 Portal de Notícias - Todos os direitos reservados.&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+          </div>
+        </article>
+
+        <!-- Questão 30 -->
+        <article class="card-questao" id="q30" style="border: 2px solid #2563eb;">
+          <div class="questao-cabecalho">
+            <span class="numero-bolha" style="background-color: #1e3a8a;">30</span>
+            <h3 class="enunciado-questao">30. Elabore uma página web que reúna os seguintes requisitos: Utilize HTML semântico com cabeçalho, menu, conteúdo principal e rodapé; apresente três cartões com informações; utilize CSS para configurar fontes, cores, bordas e espaçamentos; organize os cartões lado a lado em telas grandes e em uma única coluna em telas com largura de até 600 pixels; inclua um botão que altere uma mensagem quando clicado.</h3>
+          </div>
+          <div class="resposta-simples">
+            <p><strong>Demonstração completa dos requisitos reunidos:</strong></p>
+          </div>
+
+          <!-- Botão interativo -->
+          <div style="margin: 10px 0; padding: 14px; background-color: #eff6ff; border-radius: 8px;">
+            <p id="texto-dinamico-q30" style="color: #1e40af; font-weight: bold; margin-bottom: 8px;">
+              Clique no botão para testar a alteração da mensagem:
+            </p>
+            <button id="btn-q30" class="btn-padrao">Alterar Mensagem</button>
+          </div>
+
+          <!-- Três cartões responsivos -->
+          <div class="conteiner-cards-flex">
+            <article class="card-info">
+              <h4>Cartão 1: Tipografia & CSS</h4>
+              <p>Fontes Arial, Georgia e Verdana, line-height 1.8, cores e sombras modernas.</p>
+            </article>
+            <article class="card-info">
+              <h4>Cartão 2: Eventos JavaScript</h4>
+              <p>Controle de cliques e mouse com addEventListener de forma limpa e modular.</p>
+            </article>
+            <article class="card-info">
+              <h4>Cartão 3: Responsividade</h4>
+              <p>Flexbox e @media query garantindo coluna única em telas até 600px.</p>
+            </article>
+          </div>
+        </article>
+      </section>
+
+    </main>
+
+    <!-- RODAPÉ DA PÁGINA -->
+    <footer class="rodape-pagina">
+      <p><strong>Desenvolvimento Front-End</strong> &copy; 2026 - Atividade de Aprendizado Prático.</p>
+      <p>Estrutura semântica, estilos CSS3 e scripts JavaScript integrados.</p>
+    </footer>
+
+  </div>
+
+  <!-- JAVASCRIPT DOS EVENTOS -->
+  <script>
+    // Q15: Botão altera o texto do parágrafo
+    const btnQ15 = document.getElementById('btn-q15');
+    const paragrafoQ15 = document.getElementById('paragrafo-q15');
+    btnQ15.addEventListener('click', function() {
+      paragrafoQ15.textContent = 'Sucesso! O texto foi alterado pelo clique no botão!';
+      paragrafoQ15.style.color = '#16a34a';
+    });
+
+    // Q16: Botão muda cor no mouseover e volta no mouseout
+    const btnQ16 = document.getElementById('btn-q16');
+    const textoStatusMouse = document.getElementById('texto-status-mouse');
+    btnQ16.addEventListener('mouseover', function() {
+      btnQ16.style.backgroundColor = '#ea580c';
+      textoStatusMouse.textContent = '(Mouse sobre o botão!)';
+      textoStatusMouse.style.color = '#ea580c';
+    });
+    btnQ16.addEventListener('mouseout', function() {
+      btnQ16.style.backgroundColor = '#475569';
+      textoStatusMouse.textContent = '(Mouse fora do botão)';
+      textoStatusMouse.style.color = '#64748b';
+    });
+
+    // Q18: Formulário com mensagem de boas-vindas
+    const btnEnviarQ18 = document.getElementById('btn-enviar-q18');
+    const campoNomeQ18 = document.getElementById('campo-nome-q18');
+    const msgQ18 = document.getElementById('msg-q18');
+    btnEnviarQ18.addEventListener('click', function() {
+      const nome = campoNomeQ18.value.trim();
+      if (nome === '') {
+        msgQ18.style.display = 'block';
+        msgQ18.textContent = 'Por favor, digite seu nome primeiro!';
+        msgQ18.style.color = '#dc2626';
+        msgQ18.style.borderLeftColor = '#dc2626';
+      } else {
+        msgQ18.style.display = 'block';
+        msgQ18.textContent = `Olá, ${nome}! Seja muito bem-vindo(a)!`;
+        msgQ18.style.color = '#1e40af';
+        msgQ18.style.borderLeftColor = '#2563eb';
+      }
+    });
+
+    // Q30: Botão que alterna mensagem dinâmica
+    const btnQ30 = document.getElementById('btn-q30');
+    const textoDinamicoQ30 = document.getElementById('texto-dinamico-q30');
+    const frasesQ30 = [
+      '🚀 Requisito atendido: HTML semântico com header, nav, main e footer!',
+      '📱 Requisito atendido: Layout 100% responsivo para celulares e computadores!',
+      '🎨 Requisito atendido: CSS com fontes, bordas e sombras modernas!',
+      '⚡ Requisito atendido: 3 cartões organizados perfeitamente com Flexbox!',
+      '💡 JavaScript interativo executado com sucesso!'
+    ];
+    let contador = 0;
+    btnQ30.addEventListener('click', function() {
+      contador = (contador + 1) % frasesQ30.length;
+      textoDinamicoQ30.textContent = frasesQ30[contador];
+    });
+  </script>
+
+</body>
+</html>

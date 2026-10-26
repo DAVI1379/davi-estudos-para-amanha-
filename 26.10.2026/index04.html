@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Definição da codificação de caracteres (permite acentuação em português como ç, ã, é) -->
+  <meta charset="UTF-8">
+  
+  <!-- Configuração de viewport para garantir boa visualização em dispositivos móveis e desktops -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Requisito 1: Título da aba do navegador -->
+  <title>Cursos de Tecnologia</title>
+  
+  <!-- Ligação com a folha de estilos externa (style04.css) -->
+  <link rel="stylesheet" href="style04.css">
+</head>
+<body>
+
+  <!-- Cabeçalho da página -->
+  <header>
+    <!-- Requisito 1: Um título principal (h1) com efeito de animação @keyframes no CSS -->
+    <!-- Requisito 10: Animação "aparecer" aplicada a este h1 -->
+    <h1>Cursos de Tecnologia</h1>
+    <p>Escolha seu próximo aprendizado.</p>
+  </header>
+
+  <!-- Conteúdo principal da página -->
+  <main>
+    <!-- Seção de exibição dos cursos com layout flexível (Flexbox) -->
+    <section class="cursos">
+
+      <!-- Requisito 2: Cartão 1 de curso (Desenvolvimento Web) -->
+      <!-- Requisito 4 e 9: Cartão recebe transição e efeito :hover no CSS -->
+      <article class="cartao">
+        <h2>Desenvolvimento Web</h2>
+        <p>Aprenda HTML, CSS e JavaScript.</p>
+        <!-- Requisito 3: Um botão no cartão -->
+        <!-- Requisito 5 e 6: Botão com efeitos :hover e :active -->
+        <button type="button">Saiba mais</button>
+      </article>
+
+      <!-- Requisito 2: Cartão 2 de curso (Lógica de Programação) -->
+      <article class="cartao">
+        <h2>Lógica de Programação</h2>
+        <p>Desenvolva seu raciocínio lógico.</p>
+        <!-- Requisito 3: Um botão no cartão -->
+        <button type="button">Saiba mais</button>
+      </article>
+
+      <!-- Requisito 2: Cartão 3 de curso (Banco de Dados) -->
+      <article class="cartao">
+        <h2>Banco de Dados</h2>
+        <p>Aprenda a organizar informações.</p>
+        <!-- Requisito 3: Um botão no cartão -->
+        <button type="button">Saiba mais</button>
+      </article>
+
+    </section>
+
+    <!-- Seção de contato / captura de leads com formulário -->
+    <section class="secao-formulario">
+      <h2>Receba informações</h2>
+
+      <!-- Requisito 7: Um formulário com pelo menos dois campos -->
+      <form>
+        <!-- Campo 1: Nome do usuário -->
+        <label for="nome">Nome:</label>
+        <!-- Requisito 8: Campo de texto com efeito :focus configurado no CSS -->
+        <input id="nome" type="text" placeholder="Digite seu nome completo" required>
+
+        <!-- Campo 2: E-mail do usuário -->
+        <label for="email">E-mail:</label>
+        <!-- Requisito 8: Campo de e-mail com efeito :focus configurado no CSS -->
+        <input id="email" type="email" placeholder="seuemail@exemplo.com" required>
+
+        <!-- Botão de envio do formulário (também herda os efeitos :hover e :active) -->
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>

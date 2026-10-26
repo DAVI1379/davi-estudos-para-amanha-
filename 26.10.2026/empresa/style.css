@@ -1,0 +1,79 @@
+/* Configuração geral do corpo da página */
+body {
+  font-family: Arial, sans-serif; /* Define a fonte do texto (Arial ou alternativa sem serifa) */
+  margin: 30px;                   /* Cria um espaço de respiro de 30px nas bordas da tela */
+  color: #222222;                 /* Cor escura do texto para garantir boa leitura */
+}
+
+/* Requisito 2 e 8: Título com linha sólida (Estilo 1: solid) */
+.titulo {
+  border-bottom: 4px solid #2563EB; /* Requisito 2: Linha azul sólida de 4px abaixo do título */
+  padding-bottom: 12px;             /* Espaço interno de 12px entre o texto e a linha azul */
+}
+
+/* Requisito 9: Efeito hover na linha decorativa do título */
+.titulo:hover {
+  border-color: orange;             /* Requisito 9: A linha azul muda para laranja ao passar o mouse */
+}
+
+/* Títulos secundários das seções */
+h2 {
+  border-bottom: 2px solid #DDDDDD; /* Linha cinza clara sólida de 2px abaixo dos subtítulos */
+  padding-bottom: 8px;              /* Espaço de 8px entre o texto do h2 e a linha */
+}
+
+/* Requisito 4 e 7: Cartões de serviços com borda */
+.cartao {
+  border: 1px solid #CCCCCC;        /* Requisito 7: Borda cinza fina de 1px ao redor de todo o cartão */
+  border-left: 5px solid #2563EB;   /* Linha lateral azul mais grossa de 5px para dar destaque */
+  padding: 15px;                    /* Espaço interno de 15px para o texto não colar na borda */
+  margin: 15px 0;                   /* Espaço externo de 15px acima e abaixo para separar os cartões */
+}
+
+/* Requisito 8: Terceiro serviço com borda pontilhada (Estilo 2: dotted) */
+.cartao-destaque {
+  border: 2px dotted #2563EB;       /* Requisito 8: Borda pontilhada azul de 2px (Estilo dotted) */
+  border-left: 5px solid #2563EB;   /* Mantém a linha lateral azul de destaque */
+}
+
+/* Requisito 5 e 8: Linha separadora entre seções (Estilo 3: dashed) */
+hr {
+  border: none;                     /* Remove a borda cinza padrão e feia do navegador */
+  border-top: 2px dashed #DDDDDD;   /* Requisito 8: Linha tracejada cinza de 2px (Estilo dashed) */
+  margin: 30px 0;                   /* Espaço de 30px acima e abaixo para separar as seções */
+}
+
+/* Requisito 6: Linha lateral para destacar o aviso */
+.aviso {
+  border-left: 5px solid orange;    /* Requisito 6: Linha lateral laranja grossa de 5px */
+  padding: 12px;                    /* Espaço interno de 12px para acolchoar o texto */
+  background-color: #FFF7ED;        /* Cor de fundo alaranjada bem suave para destacar o aviso */
+}
+
+/* Rodapé da página (footer) */
+footer {
+  margin-top: 40px;                 /* Espaço de 40px acima do rodapé para separar do conteúdo */
+  text-align: center;               /* Centraliza todos os textos do rodapé */
+  font-size: 14px;                  /* Tamanho de letra de 14px */
+  color: #555555;                   /* Cor cinza intermediária para o texto do rodapé */
+}
+
+/* Título de contato dentro do rodapé */
+footer h3 {
+  font-size: 18px;                  /* Tamanho de 18px para o título Contato */
+  color: #1e3a8a;                   /* Cor azul escura */
+  margin-bottom: 8px;               /* Espaço de 8px abaixo do título Contato */
+}
+
+/* Link de e-mail do Gmail no rodapé */
+footer a {
+  color: #2563EB;                   /* Cor azul para o link do Gmail */
+  text-decoration: none;            /* Remove o sublinhado padrão do link */
+  font-weight: bold;                /* Deixa o e-mail em negrito para facilitar a leitura */
+}
+
+/* Efeito ao passar o mouse sobre o e-mail */
+footer a:hover {
+  text-decoration: underline;       /* Adiciona linha sublinhada ao passar o mouse sobre o e-mail */
+  color: orange;                    /* Muda a cor do link para laranja no hover */
+}

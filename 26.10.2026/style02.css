@@ -1,0 +1,494 @@
+/* ==========================================================================
+   ARQUIVO: style02.css
+   ATIVIDADE PRÁTICA 02 - ESTILOS COMPLETOS E COMENTADOS LINHA POR LINHA
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. RESET E ESTILO GERAL DA PÁGINA
+   -------------------------------------------------------------------------- */
+* {
+  margin: 0;                     /* Zera as margens externas padrão de todos os elementos */
+  padding: 0;                    /* Zera os espaçamentos internos padrão de todos os elementos */
+  box-sizing: border-box;        /* Garante que bordas e padding não aumentem a largura total do elemento */
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif; /* Define a família de fontes padrão da página */
+  font-size: 16px;                            /* Tamanho base de leitura para todo o texto */
+  line-height: 1.6;                           /* Espaçamento vertical entre linhas para leitura confortável */
+  color: #1e293b;                             /* Cor do texto em tom cinza-azulado escuro para não cansar a vista */
+  background-color: #f1f5f9;                  /* Cor de fundo cinza bem clara para contraste com os cartões brancos */
+  padding: 20px 10px;                         /* Espaço de respiro nas bordas da janela */
+}
+
+/* Caixa limitadora central para não esticar demais o conteúdo em monitores grandes */
+.container {
+  max-width: 980px;              /* Largura máxima de 980 pixels */
+  margin: 0 auto;                /* Centraliza o bloco automaticamente na horizontal */
+}
+
+/* --------------------------------------------------------------------------
+   2. CABEÇALHO, MENU E RODAPÉ (HTML SEMÂNTICO)
+   -------------------------------------------------------------------------- */
+
+/* Cabeçalho do topo da página */
+header.topo-pagina {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb); /* Gradiente de azul escuro para azul vivo */
+  color: #ffffff;                                         /* Cor branca para o texto */
+  padding: 30px 20px;                                     /* Espaçamento interno de 30px no topo/base e 20px nas laterais */
+  border-radius: 12px;                                    /* Cantos arredondados de 12px */
+  text-align: center;                                     /* Centraliza os textos do cabeçalho */
+  margin-bottom: 20px;                                    /* Espaço de 20px abaixo do cabeçalho */
+  box-shadow: 0 4px 14px rgba(30, 58, 138, 0.2);          /* Sombra azul suave para dar profundidade */
+}
+
+header.topo-pagina h1 {
+  font-size: 30px;               /* Tamanho grande para destacar o título principal */
+  font-weight: 700;              /* Letra em negrito bem encorpado */
+  margin-bottom: 8px;            /* Espaço de 8px abaixo do título antes do subtítulo */
+}
+
+header.topo-pagina p {
+  font-size: 16px;               /* Tamanho agradável para o parágrafo de apresentação */
+  opacity: 0.95;                 /* Leve transparência para destacar hierarquicamente o h1 */
+}
+
+/* Barra do menu de navegação rápida */
+nav.menu-navegacao {
+  background-color: #ffffff;     /* Fundo branco limpo */
+  border-radius: 8px;            /* Cantos arredondados */
+  padding: 12px;                 /* Espaço interno de 12px */
+  margin-bottom: 25px;           /* Espaço de 25px abaixo do menu */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Sombra sutil embaixo do menu */
+}
+
+nav.menu-navegacao ul {
+  list-style: none;              /* Remove as bolinhas pretas padrão da lista */
+  display: flex;                 /* Ativa o Flexbox para alinhar os links lado a lado */
+  justify-content: center;       /* Centraliza os botões do menu horizontalmente */
+  gap: 15px;                     /* Espaço uniforme de 15px entre cada botão */
+  flex-wrap: wrap;               /* Permite que os botões quebrem linha se a tela for pequena */
+}
+
+nav.menu-navegacao a {
+  text-decoration: none;         /* Remove a linha sublinhada padrão dos links */
+  color: #334155;                /* Cor cinza escura para os textos dos links */
+  font-weight: 600;              /* Letra semi-negrito para boa leitura */
+  font-size: 14px;               /* Tamanho de 14px */
+  padding: 6px 12px;             /* Área de clique estendida */
+  border-radius: 6px;            /* Cantos arredondados no botão do link */
+  transition: all 0.2s ease;     /* Transição suave ao passar o mouse */
+}
+
+nav.menu-navegacao a:hover {
+  background-color: #eff6ff;     /* Fundo azul bem clarinho quando o mouse passa em cima */
+  color: #1d4ed8;                /* Texto azul vibrante ao passar o mouse */
+}
+
+/* Rodapé no final da página */
+footer.rodape-pagina {
+  background-color: #0f172a;     /* Cor de fundo azul petróleo quase preta */
+  color: #94a3b8;                /* Cor do texto em cinza claro para bom contraste */
+  text-align: center;            /* Centraliza todo o texto do rodapé */
+  padding: 25px 15px;            /* Espaçamento interno acolchoado */
+  border-radius: 10px;           /* Cantos arredondados */
+  margin-top: 40px;              /* Espaço de 40px acima do rodapé para separar do conteúdo */
+  font-size: 14px;               /* Tamanho de fonte levemente menor */
+}
+
+footer.rodape-pagina strong {
+  color: #ffffff;                /* Deixa os termos em negrito na cor branca pura */
+}
+
+/* --------------------------------------------------------------------------
+   3. BLOCOS DE CADA PARTE E CARDS NUMERADOS DE QUESTÕES
+   -------------------------------------------------------------------------- */
+
+/* Seção que agrupa cada uma das 5 partes da atividade */
+.secao-bloco {
+  background-color: #ffffff;     /* Fundo branco */
+  border-radius: 12px;           /* Cantos suaves e modernos */
+  padding: 25px;                 /* Espaço interno de 25px */
+  margin-bottom: 30px;           /* Espaço de 30px separando uma parte da outra */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04); /* Sombra suave */
+}
+
+/* Título de cada grande parte temática */
+.titulo-parte {
+  font-size: 22px;               /* Tamanho de 22px para destaque do bloco */
+  color: #1e3a8a;                /* Cor azul escuro elegante */
+  border-bottom: 2px solid #e2e8f0; /* Linha divisória horizontal cinza abaixo do título */
+  padding-bottom: 10px;          /* Espaço de 10px entre o texto e a linha */
+  margin-bottom: 20px;           /* Espaço de 20px abaixo da linha antes das questões */
+}
+
+/* Caixa retangular de cada Questão individual */
+.card-questao {
+  background-color: #f8fafc;     /* Fundo cinza bem clarinho */
+  border: 1px solid #e2e8f0;     /* Borda fina contornando a questão */
+  border-radius: 10px;           /* Cantos arredondados */
+  padding: 20px;                 /* Espaçamento interno de 20px */
+  margin-bottom: 22px;           /* Espaço entre uma questão e a próxima */
+  transition: all 0.2s ease;     /* Transição suave de borda e sombra no hover */
+}
+
+.card-questao:hover {
+  border-color: #93c5fd;         /* Borda fica azul claro ao passar o mouse */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra fica mais pronunciada */
+}
+
+/* Cabeçalho da questão (reúne o número e o enunciado) */
+.questao-cabecalho {
+  display: flex;                 /* Alinha o número e a pergunta lado a lado */
+  align-items: flex-start;       /* Alinha no topo */
+  gap: 12px;                     /* Espaço de 12px entre a bolha do número e o texto */
+  margin-bottom: 14px;           /* Espaço antes da resposta */
+}
+
+/* Círculo azul com o número da questão */
+.numero-bolha {
+  display: inline-flex;          /* Permite alinhar o número no centro do círculo */
+  align-items: center;           /* Centraliza verticalmente o número */
+  justify-content: center;        /* Centraliza horizontalmente o número */
+  background-color: #2563eb;     /* Cor de fundo azul vivo */
+  color: #ffffff;                /* Cor branca para o algarismo */
+  font-size: 15px;               /* Tamanho da letra do número */
+  font-weight: 700;              /* Número em negrito */
+  min-width: 34px;               /* Diâmetro horizontal do círculo */
+  height: 34px;                  /* Diâmetro vertical do círculo */
+  border-radius: 50%;            /* 50% transforma o quadrado em um círculo perfeito */
+  flex-shrink: 0;                /* Impede que o círculo seja esmagado pelo texto longo */
+}
+
+/* Texto do enunciado da questão */
+.enunciado-questao {
+  font-size: 16px;               /* Tamanho legível */
+  font-weight: 600;              /* Semi-negrito para dar clareza à pergunta */
+  color: #0f172a;                /* Cor escura para boa leitura */
+  line-height: 1.45;             /* Altura de linha proporcional */
+  margin: 0;                     /* Zera a margem padrão do h3 */
+}
+
+/* Caixa com a resposta explicativa simples */
+.resposta-simples {
+  background-color: #ffffff;     /* Fundo branco para destacar do fundo do cartão */
+  border-left: 4px solid #3b82f6;/* Linha lateral azul que indica que é a resposta */
+  border-radius: 0 6px 6px 0;    /* Cantos arredondados no lado direito */
+  padding: 12px 16px;            /* Espaço interno para acolchoar o texto */
+  margin-bottom: 12px;           /* Espaço antes do código de demonstração */
+  font-size: 15px;               /* Tamanho agradável para leitura */
+  color: #334155;                /* Cinza escuro */
+}
+
+.resposta-simples p {
+  margin-bottom: 8px;            /* Espaço entre parágrafos da resposta */
+}
+
+.resposta-simples p:last-child {
+  margin-bottom: 0;              /* Tira a margem do último parágrafo */
+}
+
+.resposta-simples ul,
+.resposta-simples ol {
+  margin-left: 20px;             /* Recuo para as listas com marcadores */
+  margin-top: 6px;               /* Espaço acima da lista */
+  margin-bottom: 6px;            /* Espaço abaixo da lista */
+}
+
+.resposta-simples li {
+  margin-bottom: 4px;            /* Espaço entre um item da lista e outro */
+}
+
+/* Moldura que envolve a demonstração prática ou o código */
+.caixa-demo {
+  background-color: #ffffff;     /* Fundo branco */
+  border: 1px solid #cbd5e1;     /* Borda cinza suave */
+  border-radius: 8px;            /* Cantos arredondados */
+  padding: 14px;                 /* Espaço interno */
+  margin-top: 10px;              /* Espaço acima da demonstração */
+}
+
+/* Bloco escuro para exibição de códigos (<pre>) */
+.caixa-demo pre {
+  background-color: #0f172a;     /* Fundo azul escuro/preto de editor de código */
+  color: #f8fafc;                /* Texto claro para sintaxe */
+  padding: 12px;                 /* Espaço interno */
+  border-radius: 6px;            /* Cantos arredondados */
+  overflow-x: auto;              /* Adiciona barra de rolagem lateral se o código for muito longo */
+  font-family: Consolas, Monaco, 'Courier New', monospace; /* Fonte monoespaçada de programação */
+  font-size: 14px;               /* Tamanho da letra do código */
+  margin-top: 6px;               /* Espaço acima */
+}
+
+/* Código em linha (<code>) */
+.caixa-demo code {
+  color: #1e40af;                /* Cor azul para trechos de código em linha */
+  background-color: #eff6ff;     /* Fundo azul claro */
+  padding: 2px 6px;              /* Respiro ao redor do trecho */
+  border-radius: 4px;            /* Cantinhos arredondados */
+  font-family: Consolas, Monaco, monospace; /* Fonte monoespaçada */
+  font-size: 14px;               /* Tamanho */
+}
+
+.caixa-demo pre code {
+  color: #f8fafc;                /* Letra branca dentro do bloco <pre> */
+  background-color: transparent; /* Fundo transparente pois o <pre> já tem fundo escuro */
+  padding: 0;                    /* Zera o padding interno */
+}
+
+/* --------------------------------------------------------------------------
+   4. ESTILOS DAS DEMONSTRAÇÕES PRÁTICAS (FONTES, BORDAS, BOTÕES)
+   -------------------------------------------------------------------------- */
+
+/* Q3: Título Arial 32px azul negrito */
+.titulo-q3-estilo {
+  font-family: Arial, sans-serif; /* Define fonte Arial */
+  font-size: 32px;                /* Tamanho de 32 pixels */
+  font-weight: bold;              /* Peso negrito */
+  color: #1d4ed8;                 /* Cor azul moderna */
+  margin: 10px 0;                 /* Margem acima e abaixo */
+}
+
+/* Q4: font-style vs text-decoration */
+.texto-italico {
+  font-style: italic;             /* Inclina a fonte (itálico) */
+  color: #0f172a;                 /* Cor escura */
+}
+
+.texto-sublinhado {
+  text-decoration: underline;     /* Adiciona linha sublinhada embaixo do texto */
+  color: #1d4ed8;                 /* Cor azul */
+}
+
+/* Q5: Três parágrafos diferentes */
+.paragrafo-arial {
+  font-family: Arial, sans-serif; /* Fonte Arial */
+  font-size: 18px;                /* Tamanho 18px */
+  color: #1e293b;                 /* Cor escura */
+  margin-bottom: 6px;             /* Espaço abaixo */
+}
+
+.paragrafo-georgia {
+  font-family: Georgia, serif;   /* Fonte Georgia com serifa */
+  font-size: 16px;                /* Tamanho 16px */
+  color: #334155;                 /* Cor cinza */
+  margin-bottom: 6px;             /* Espaço abaixo */
+}
+
+.paragrafo-verdana {
+  font-family: Verdana, sans-serif; /* Fonte Verdana sem serifa */
+  font-size: 14px;                /* Tamanho 14px */
+  color: #475569;                 /* Cor cinza média */
+}
+
+/* Q7: line-height */
+.paragrafo-lineheight {
+  line-height: 1.8;               /* 180% da altura da fonte: espaçamento confortável entre linhas */
+  background-color: #f8fafc;      /* Fundo suave */
+  padding: 12px;                  /* Espaço interno */
+  border-radius: 6px;             /* Cantos arredondados */
+  border: 1px solid #e2e8f0;      /* Borda sutil */
+}
+
+/* Q9: Borda sólida 2px preta, cantos arredondados e padding 15px */
+.caixa-q9 {
+  border: 2px solid #000000;      /* Borda sólida preta de 2px */
+  border-radius: 8px;             /* Cantos arredondados com raio de 8px */
+  padding: 15px;                  /* Espaçamento interno de 15px */
+  background-color: #ffffff;      /* Fundo branco */
+}
+
+/* Q10: Margin vs Padding */
+.caixa-margin-padding-externa {
+  background-color: #e2e8f0;      /* Fundo cinza */
+  border: 2px dashed #64748b;     /* Borda tracejada cinza */
+  padding: 16px;                  /* Padding: espaço interno que protege o elemento filho */
+  margin: 10px 0;                 /* Margin: espaço externo que afasta vizinhos */
+  border-radius: 6px;             /* Cantos arredondados */
+}
+
+.caixa-margin-padding-interna {
+  background-color: #ffffff;      /* Fundo branco */
+  padding: 12px;                  /* Padding interno da caixa branca */
+  border: 2px solid #2563eb;      /* Borda azul sólida */
+  border-radius: 4px;             /* Cantos arredondados */
+}
+
+/* Q11: 3 caixas de bordas */
+.grade-bordas {
+  display: flex;                  /* Alinha as 3 caixas lado a lado */
+  gap: 12px;                      /* Espaço de 12px entre as caixas */
+  margin-top: 10px;               /* Espaço acima */
+}
+
+.borda-item {
+  flex: 1;                        /* Todas ocupam larguras iguais */
+  padding: 14px;                  /* Espaço interno */
+  text-align: center;             /* Texto centralizado */
+  background-color: #ffffff;      /* Fundo branco */
+  border-radius: 6px;             /* Cantos arredondados */
+  font-weight: 600;               /* Texto semi-negrito */
+}
+
+.borda-solida {
+  border: 3px solid #2563eb;      /* Borda contínua sólida azul */
+}
+
+.borda-tracejada {
+  border: 3px dashed #16a34a;     /* Borda em traços verde */
+}
+
+.borda-pontilhada {
+  border: 3px dotted #dc2626;     /* Borda em pontos vermelha */
+}
+
+/* Q12: border-radius, box-shadow e outline */
+.card-sombra-efeito {
+  background-color: #ffffff;      /* Fundo branco */
+  padding: 18px;                  /* Espaço interno */
+  border-radius: 12px;            /* Cantos arredondados */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Sombra suave de profundidade 3D */
+  outline: 2px solid transparent; /* Contorno transparente pronto para ser ativado */
+  transition: all 0.25s ease;     /* Transição suave para o efeito de elevação */
+}
+
+.card-sombra-efeito:hover {
+  transform: translateY(-3px);    /* Levanta a caixa em 3px */
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12); /* Sombra mais densa simulando elevação */
+  outline: 2px solid #3b82f6;     /* Contorno azul visível sem alterar as dimensões da caixa */
+}
+
+/* --------------------------------------------------------------------------
+   5. BOTÕES E FORMULÁRIOS
+   -------------------------------------------------------------------------- */
+.btn-padrao {
+  display: inline-block;          /* Permite aplicar dimensões e padding */
+  padding: 10px 18px;             /* Espaçamento interno confortável para o clique */
+  font-size: 15px;                /* Tamanho do texto do botão */
+  font-weight: 600;               /* Texto em semi-negrito */
+  color: #ffffff;                 /* Letra branca */
+  background-color: #2563eb;      /* Fundo azul vivo */
+  border: none;                   /* Remove a borda padrão do navegador */
+  border-radius: 6px;             /* Cantos arredondados */
+  cursor: pointer;                /* Muda a seta do mouse para o ícone de mãozinha */
+  transition: background-color 0.2s ease; /* Transição de cor suave */
+}
+
+.btn-padrao:hover {
+  background-color: #1d4ed8;      /* Azul mais escuro ao passar o mouse */
+}
+
+.btn-hover-demo {
+  background-color: #475569;      /* Cinza original */
+  color: #ffffff;                 /* Letra branca */
+  padding: 10px 20px;             /* Espaçamento interno */
+  border: none;                   /* Sem borda */
+  border-radius: 6px;             /* Cantos arredondados */
+  cursor: pointer;                /* Cursor de mãozinha */
+  transition: background-color 0.3s ease; /* Transição suave de cor */
+  font-weight: 600;               /* Semi-negrito */
+}
+
+.form-linha {
+  display: flex;                  /* Alinha o campo de texto e o botão lado a lado */
+  gap: 10px;                      /* Espaço de 10px entre o campo e o botão */
+  margin-top: 10px;               /* Espaço acima */
+}
+
+.campo-input {
+  flex: 1;                        /* Faz o campo de texto ocupar todo o espaço restante */
+  padding: 10px 12px;             /* Espaçamento interno onde se digita */
+  font-size: 15px;                /* Tamanho da letra digitada */
+  border: 1px solid #cbd5e1;      /* Borda cinza suave */
+  border-radius: 6px;             /* Cantos arredondados */
+  outline: none;                  /* Remove o contorno padrão azulado do navegador */
+}
+
+.campo-input:focus {
+  border-color: #2563eb;          /* Borda fica azul ao clicar para digitar */
+}
+
+.resultado-aviso {
+  margin-top: 10px;               /* Espaço acima */
+  padding: 10px 14px;             /* Espaçamento interno */
+  background-color: #eff6ff;      /* Fundo azul claro */
+  border-left: 4px solid #2563eb; /* Linha lateral azul indicando aviso */
+  color: #1e40af;                 /* Texto azul escuro */
+  border-radius: 4px;             /* Cantos arredondados */
+  font-weight: 500;               /* Peso médio */
+}
+
+/* --------------------------------------------------------------------------
+   6. RESPONSIVIDADE E CARTÕES (QUESTÕES 21, 24 E 30)
+   -------------------------------------------------------------------------- */
+.conteiner-cards-flex {
+  display: flex;                  /* Ativa o Flexbox para alinhar os cartões */
+  flex-wrap: wrap;                /* Permite quebra de linha se a tela for pequena */
+  justify-content: space-between; /* Distribui os 3 cartões de ponta a ponta com espaço igual */
+  gap: 15px;                      /* Espaço uniforme de 15px entre os cartões */
+  margin-top: 15px;               /* Espaço acima */
+}
+
+.card-info {
+  flex: 1 1 calc(33.333% - 15px); /* Divide a linha em 3 colunas iguais em telas de computador */
+  min-width: 240px;               /* Largura mínima para o cartão não ficar muito espremido */
+  background-color: #ffffff;      /* Fundo branco */
+  border: 1px solid #e2e8f0;      /* Borda fina */
+  border-radius: 10px;            /* Cantos arredondados */
+  padding: 18px;                  /* Espaço interno */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04); /* Sombra suave */
+}
+
+.card-info h4 {
+  font-size: 17px;                /* Tamanho do título do cartão */
+  color: #1e40af;                 /* Cor azul escura */
+  margin-bottom: 8px;             /* Espaço abaixo */
+}
+
+.card-info p {
+  font-size: 14px;                /* Tamanho da descrição */
+  color: #64748b;                 /* Cor cinza suave */
+  margin-bottom: 0;               /* Zera a margem inferior */
+}
+
+/* --------------------------------------------------------------------------
+   7. MEDIA QUERIES (QUESTÕES 20, 21 E 30)
+   -------------------------------------------------------------------------- */
+@media (max-width: 600px) {
+  /* Reduz o tamanho do título em telas de celular até 600px */
+  header.topo-pagina h1,
+  .titulo-q3-estilo {
+    font-size: 22px;              /* Redução de 30px/32px para 22px */
+  }
+
+  /* Menu de navegação reorganizado em coluna vertical para celulares */
+  nav.menu-navegacao ul {
+    flex-direction: column;       /* Empilha os links verticalmente */
+    align-items: center;          /* Centraliza os links */
+    gap: 8px;                     /* Espaço entre os links */
+  }
+
+  /* Cartões reorganizados em uma única coluna vertical no celular */
+  .conteiner-cards-flex {
+    flex-direction: column;       /* Empilha os cartões um embaixo do outro */
+  }
+
+  .card-info {
+    width: 100%;                  /* Ocupa 100% da largura da tela do celular */
+    flex: 1 1 100%;               /* Força largura total */
+  }
+
+  /* Caixas de bordas da Q11 empilhadas no celular */
+  .grade-bordas {
+    flex-direction: column;       /* Fica uma caixa embaixo da outra */
+  }
+
+  /* Campo de formulário e botão empilhados no celular */
+  .form-linha {
+    flex-direction: column;       /* Campo em cima e botão embaixo */
+  }
+
+  .questao-cabecalho {
+    flex-direction: row;          /* Mantém o número ao lado do título */
+  }
+}

@@ -1,0 +1,154 @@
+/* ==========================================================================
+   PROJETO PRÁTICO: PÁGINA INTERATIVA DE CURSOS
+   ARQUIVO: style04.css
+   Objetivo: Estilização visual interativa com CSS (:hover, :active, :focus,
+             transition e animações com @keyframes).
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. ESTILOS GERAIS DA PÁGINA (BODY)
+   -------------------------------------------------------------------------- */
+body {
+  font-family: Arial, sans-serif; /* Define uma fonte limpa e de fácil leitura */
+  margin: 30px;                   /* Cria espaçamento externo nas bordas da página */
+  color: #222222;                 /* Cor de texto cinza escuro para melhor contraste e legibilidade */
+}
+
+/* --------------------------------------------------------------------------
+   2. CABEÇALHO (HEADER) E ANIMAÇÃO DO TÍTULO PRINCIPAL
+   Requisito 1: Um título principal.
+   Requisito 10: Uma animação utilizando @keyframes.
+   -------------------------------------------------------------------------- */
+header {
+  text-align: center;             /* Centraliza o título e o texto de introdução */
+  margin-bottom: 30px;            /* Espaço abaixo do cabeçalho antes dos cursos */
+}
+
+/* Aplicação da animação no título principal <h1> */
+header h1 {
+  /*
+    Propriedade 'animation':
+    - 'aparecer': nome da animação definida no @keyframes abaixo.
+    - '1s': duração total da animação (1 segundo).
+    - 'ease-out': curva de velocidade suave, desacelerando no final.
+  */
+  animation: aparecer 1s ease-out;
+}
+
+/*
+  Requisito 10: Definição da animação com @keyframes
+  'from' (ou 0%): estado inicial do elemento ao carregar a página.
+  'to' (ou 100%): estado final do elemento após a conclusão.
+*/
+@keyframes aparecer {
+  from {
+    opacity: 0;                   /* Começa invisível */
+    transform: translateY(-15px); /* Começa 15px deslocado para cima */
+  }
+  to {
+    opacity: 1;                   /* Torna-se 100% visível */
+    transform: translateY(0);     /* Volta para sua posição original natural */
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. SEÇÃO DE CURSOS (LAYOUT FLEXBOX)
+   Requisito 2: Pelo menos três cartões de cursos.
+   -------------------------------------------------------------------------- */
+.cursos {
+  display: flex;                  /* Ativa o Flexbox para alinhar os cartões lado a lado */
+  flex-wrap: wrap;                /* Permite que os cartões quebrem para a próxima linha em telas menores */
+  gap: 20px;                      /* Espaço uniforme de 20px entre os cartões */
+  margin-bottom: 40px;            /* Espaçamento abaixo da lista de cursos */
+}
+
+/* --------------------------------------------------------------------------
+   4. ESTILIZAÇÃO DOS CARTÕES
+   Requisito 4: Efeito :hover nos cartões.
+   Requisito 9: Pelo menos uma transição utilizando transition.
+   -------------------------------------------------------------------------- */
+.cartao {
+  flex: 1 1 220px;                /* Cresce (1), encolhe (1) e tem largura base inicial de 220px */
+  padding: 20px;                  /* Espaçamento interno para o conteúdo não tocar nas bordas */
+  border: 1px solid #cccccc;      /* Borda cinza suave para delimitar o cartão */
+  border-radius: 10px;            /* Bordas arredondadas nos cantos */
+  
+  /*
+    Requisito 9: Propriedade 'transition'
+    Faz a mudança de estado (transform e box-shadow) acontecer de forma gradual e suave
+    ao invés de mudar bruscamente.
+  */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/*
+  Requisito 4: Efeito :hover nos cartões
+  Acionado quando o usuário passa o cursor do mouse por cima do cartão.
+*/
+.cartao:hover {
+  transform: translateY(-5px);         /* Eleva o cartão 5px para cima, criando sensação de levitação */
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12); /* Sombra suave para criar efeito de profundidade 3D */
+}
+
+/* --------------------------------------------------------------------------
+   5. ESTILIZAÇÃO DOS BOTÕES
+   Requisito 3: Um botão em cada cartão.
+   Requisito 5: Efeito :hover nos botões.
+   Requisito 6: Efeito :active nos botões.
+   Requisito 9: Transição suave nos botões.
+   -------------------------------------------------------------------------- */
+button {
+  background-color: blue;         /* Cor de fundo padrão azul */
+  color: white;                   /* Cor do texto em branco para contraste */
+  padding: 10px 18px;             /* Espaço interno: 10px superior/inferior, 18px laterais */
+  border: none;                   /* Remove a borda padrão do navegador */
+  border-radius: 5px;             /* Cantos levemente arredondados */
+  cursor: pointer;                /* Muda o cursor para mãozinha (indicando elemento clicável) */
+  
+  /*
+    Requisito 9: Transição suave para a troca de cor e efeito de clique
+  */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/*
+  Requisito 5: Efeito :hover nos botões
+  Muda a cor de fundo para verde quando o mouse passa por cima.
+*/
+button:hover {
+  background-color: green;        /* Cor verde ao passar o mouse */
+}
+
+/*
+  Requisito 6: Efeito :active nos botões
+  Acionado exatamente no momento em que o usuário clica e segura o botão do mouse.
+*/
+button:active {
+  transform: scale(0.95);         /* Reduz o botão para 95% do tamanho, simulando um clique real (pressionamento) */
+}
+
+/* --------------------------------------------------------------------------
+   6. FORMULÁRIO E CAMPOS DE ENTRADA
+   Requisito 7: Um formulário com pelo menos dois campos.
+   Requisito 8: Efeito :focus nos campos.
+   -------------------------------------------------------------------------- */
+input {
+  display: block;                 /* Exibe o input como bloco para ocupar sua própria linha */
+  width: 100%;                    /* Ocupa a largura total disponível */
+  max-width: 400px;               /* Limita a largura máxima a 400px para não ficar esticado demais */
+  box-sizing: border-box;         /* Inclui padding e border dentro do cálculo da largura (evita estouro) */
+  padding: 10px;                  /* Espaço interno para digitação confortável */
+  margin: 8px 0 15px;             /* Margens: 8px acima, 0 nas laterais e 15px abaixo do campo */
+  border: 1px solid #999999;      /* Borda cinza clara neutra */
+  border-radius: 5px;             /* Cantos arredondados */
+  transition: border-color 0.2s ease, outline 0.2s ease, box-shadow 0.2s ease; /* Transição no foco */
+}
+
+/*
+  Requisito 8: Efeito :focus nos campos
+  Acionado quando o usuário clica ou navega via teclado (Tab) para dentro do campo de digitação.
+*/
+input:focus {
+  outline: 2px solid #2563EB;     /* Contorno azul moderno ao redor do campo em foco */
+  border-color: #2563EB;          /* Altera a borda para azul combinando com o outline */
+}
